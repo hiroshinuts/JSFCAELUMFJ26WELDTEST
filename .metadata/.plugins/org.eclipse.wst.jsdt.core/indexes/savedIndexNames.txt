@@ -1,0 +1,7 @@
+INDEX VERSION 1.122+C:\Users\rtagata\workspacejunotestes\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3296305856.index
+4125347639.index
+1065662583.index
+1713294452.index
+1202276983.index
+2029064819.index
