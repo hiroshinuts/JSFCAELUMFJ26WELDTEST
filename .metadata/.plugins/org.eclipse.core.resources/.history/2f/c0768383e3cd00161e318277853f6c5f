@@ -16,17 +16,9 @@ public class ProdutoBean {
 	public void grava() {
 		ProdutoDao dao = new ProdutoDao();
 		dao.adiciona(produto);
-		this.produto = new Produto();
-		this.produtos = dao.listaTodos();
 	}
 	
-	public void remove(Produto produto){
-		ProdutoDao dao = new ProdutoDao();
-		dao.remove(produto);
-		this.produtos = dao.listaTodos();
-	}
-	
-	public List<Produto> getProdutos(){
+	public list<Produto> getProdutos(){
 		if(produtos==null){
 			System.out.println("Carregando produtos...");
 			produtos = new ProdutoDao().listaTodos();

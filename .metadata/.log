@@ -5163,3 +5163,6 @@ Caused by: java.lang.IllegalArgumentException: The value '2.2' is not a valid en
 	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.setValue(XMLHelperImpl.java:1156)
 	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2652)
 	... 98 more
+
+!ENTRY org.eclipse.jdt.ui 2 0 2016-12-29 14:25:31.561
+!MESSAGE The 'org.eclipse.mylyn.java.ui.javaAllCompletionProposalComputer' proposal computer from the 'org.eclipse.mylyn.java.ui' plug-in did not complete normally. The extension took too long to return from the 'computeCompletionProposals()' operation.

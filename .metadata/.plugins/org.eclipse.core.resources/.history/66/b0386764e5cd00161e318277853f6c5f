@@ -34,8 +34,6 @@
 	
 	<!-- INICIO LISTAGEM DOS PRODUTOS -->
 	
-	<h:form>
-	
 		<h:dataTable value="#{produtoBean.produtos}" var="produto">
 		
 			<h:column>
@@ -51,15 +49,10 @@
 			<h:column>
 				<f:facet name="header">Preço</f:facet>
 				#{produto.preco}
-			</h:column>
-			
-			<h:column>
-				<f:facet name="header">Ações</f:facet>
-				<h:commandLink action="#{produtoBean.remove(produto)}" value="Remover"/>
+				<f:facet name="footer">SOMATORIO</f:facet>
 			</h:column>
 		
 		</h:dataTable>
-	</h:form>
 	
 	<!-- FIM LISTAGEM DOS PRODUTOS -->
 	
