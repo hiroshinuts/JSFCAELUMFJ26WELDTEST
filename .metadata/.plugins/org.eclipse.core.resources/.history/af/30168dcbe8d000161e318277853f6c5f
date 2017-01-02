@@ -10,7 +10,6 @@
 
 	<!-- INICIO FORMULARIO -->
 	<h:form>
-		<h:inputHidden value="#{produtoBean.produto.id}"/>
 		<h2>
 			<h:outputText value="Novo Produto" rendered="#{empty produtoBean.produto.id}"/>
 			<h:outputText value="Editar Produto" rendered="#{not empty produtoBean.produto.id}"/>
@@ -60,9 +59,6 @@
 			<h:column>
 				<f:facet name="header">Ações</f:facet>
 				<h:commandLink action="#{produtoBean.remove(produto)}" value="Remover"/>
-			</h:column>
-			
-			<h:column>
 				<h:commandLink value="Alterar">
 					<f:setPropertyActionListener target="#{produtoBean.produto}" value="#{produto}"></f:setPropertyActionListener>
 				</h:commandLink>

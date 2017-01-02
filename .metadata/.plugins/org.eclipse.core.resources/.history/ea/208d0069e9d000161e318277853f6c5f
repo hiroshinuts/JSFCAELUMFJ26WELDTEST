@@ -57,8 +57,8 @@
 				#{produto.preco}
 			</h:column>
 			
+				<f:facet name="header">Ações
 			<h:column>
-				<f:facet name="header">Ações</f:facet>
 				<h:commandLink action="#{produtoBean.remove(produto)}" value="Remover"/>
 			</h:column>
 			
@@ -67,6 +67,7 @@
 					<f:setPropertyActionListener target="#{produtoBean.produto}" value="#{produto}"></f:setPropertyActionListener>
 				</h:commandLink>
 			</h:column>
+				</f:facet>
 		
 		</h:dataTable>
 	</h:form>

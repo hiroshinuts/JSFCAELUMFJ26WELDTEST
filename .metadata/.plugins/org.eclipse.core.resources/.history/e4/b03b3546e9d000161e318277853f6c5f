@@ -60,9 +60,6 @@
 			<h:column>
 				<f:facet name="header">Ações</f:facet>
 				<h:commandLink action="#{produtoBean.remove(produto)}" value="Remover"/>
-			</h:column>
-			
-			<h:column>
 				<h:commandLink value="Alterar">
 					<f:setPropertyActionListener target="#{produtoBean.produto}" value="#{produto}"></f:setPropertyActionListener>
 				</h:commandLink>
