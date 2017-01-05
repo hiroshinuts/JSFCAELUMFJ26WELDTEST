@@ -27,7 +27,7 @@
 			<h:inputText id="preco" value="#{produtoBean.produto.preco}" />
 			
 			<f:ajax execute="@form" render=":tabela @form">
-				<h:commandButton value="Gravar" action="#{produtoBean.grava}"/>
+			<h:commandButton value="Gravar" action="#{produtoBean.grava}"/> 
 			</f:ajax>			
 
 		</h:panelGrid>
@@ -62,7 +62,7 @@
 			<h:column>
 				<f:facet name="header">Ações</f:facet>
 				<h:commandLink action="#{produtoBean.remove(produto)}" value="Remover">
-					<f:ajax render="@form"/>
+					<f:ajax render="tabela"/>
 				</h:commandLink>
 			</h:column>
 			

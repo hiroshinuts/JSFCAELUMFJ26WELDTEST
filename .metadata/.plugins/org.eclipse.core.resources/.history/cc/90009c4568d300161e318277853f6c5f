@@ -9,7 +9,7 @@
 <h:body>
 
 	<!-- INICIO FORMULARIO -->
-	<h:form id="cadastro">
+	<h:form>
 		<h:inputHidden value="#{produtoBean.produto.id}"/>
 		<h2>
 			<h:outputText value="Novo Produto" rendered="#{empty produtoBean.produto.id}"/>
@@ -25,10 +25,8 @@
 				
 			<h:outputLabel value="Preço:" for="preco" />
 			<h:inputText id="preco" value="#{produtoBean.produto.preco}" />
-			
-			<f:ajax execute="@form" render=":tabela @form">
-				<h:commandButton value="Gravar" action="#{produtoBean.grava}"/>
-			</f:ajax>			
+
+			<h:commandButton value="Gravar" action="#{produtoBean.grava}"/>
 
 		</h:panelGrid>
 
@@ -40,7 +38,7 @@
 	
 	<!-- INICIO LISTAGEM DOS PRODUTOS -->
 	
-	<h:form id="tabela">
+	<h:form>
 	
 		<h:dataTable value="#{produtoBean.produtos}" var="produto">
 		
@@ -68,8 +66,7 @@
 			
 			<h:column>
 				<h:commandLink value="Alterar">
-					<f:setPropertyActionListener target="#{produtoBean.produto}" value="#{produto}"/>
-					<f:ajax execute="@form" render=":cadastro"/>
+					<f:setPropertyActionListener target="#{produtoBean.produto}" value="#{produto}"></f:setPropertyActionListener>
 				</h:commandLink>
 			</h:column>
 		

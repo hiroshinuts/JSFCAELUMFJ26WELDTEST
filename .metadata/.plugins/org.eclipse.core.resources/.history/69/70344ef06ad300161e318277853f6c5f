@@ -25,10 +25,10 @@
 				
 			<h:outputLabel value="Preço:" for="preco" />
 			<h:inputText id="preco" value="#{produtoBean.produto.preco}" />
-			
-			<f:ajax execute="@form" render=":tabela @form">
-				<h:commandButton value="Gravar" action="#{produtoBean.grava}"/>
-			</f:ajax>			
+
+			<h:commandButton value="Gravar" action="#{produtoBean.grava}"> 
+				<f:ajax render="listagem"/>
+			 </h:commandButton>
 
 		</h:panelGrid>
 
@@ -62,14 +62,13 @@
 			<h:column>
 				<f:facet name="header">Ações</f:facet>
 				<h:commandLink action="#{produtoBean.remove(produto)}" value="Remover">
-					<f:ajax render="@form"/>
+					<f:ajax render="tabela"/>
 				</h:commandLink>
 			</h:column>
 			
 			<h:column>
 				<h:commandLink value="Alterar">
-					<f:setPropertyActionListener target="#{produtoBean.produto}" value="#{produto}"/>
-					<f:ajax execute="@form" render=":cadastro"/>
+					<f:setPropertyActionListener target="#{produtoBean.produto}" value="#{produto}"></f:setPropertyActionListener>
 				</h:commandLink>
 			</h:column>
 		

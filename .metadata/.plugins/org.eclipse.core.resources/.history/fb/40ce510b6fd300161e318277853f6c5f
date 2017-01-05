@@ -25,6 +25,10 @@ public class ProdutoBean {
 		this.produtos = dao.listaTodos();
 	}
 	
+	public void cancela(){
+		System.out.println("Cancela a edição");
+		this.produto = new Produto();
+	}
 	
 	public void remove(Produto produto){
 		ProdutoDao dao = new ProdutoDao();

@@ -5166,3 +5166,47 @@ Caused by: java.lang.IllegalArgumentException: The value '2.2' is not a valid en
 
 !ENTRY org.eclipse.jdt.ui 2 0 2016-12-29 14:25:31.561
 !MESSAGE The 'org.eclipse.mylyn.java.ui.javaAllCompletionProposalComputer' proposal computer from the 'org.eclipse.mylyn.java.ui' plug-in did not complete normally. The extension took too long to return from the 'computeCompletionProposals()' operation.
+
+!ENTRY oracle.eclipse.tools.glassfish 4 1 2017-01-05 15:05:20.302
+!MESSAGE GlassFish: Stop server could not be finished because of exception.
+!STACK 0
+java.util.concurrent.ExecutionException: java.lang.Exception: Stop call failed.
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at oracle.eclipse.tools.glassfish.GlassfishGenericServerBehaviour.stopImpl(GlassfishGenericServerBehaviour.java:314)
+	at oracle.eclipse.tools.glassfish.GlassfishGenericServerBehaviour.stopServer(GlassfishGenericServerBehaviour.java:304)
+	at oracle.eclipse.tools.glassfish.GlassfishGenericServerBehaviour.stop(GlassfishGenericServerBehaviour.java:275)
+	at oracle.eclipse.tools.glassfish.GlassfishServerLaunchDelegate$GlassfishServerDebugListener.handleDebugEvents(GlassfishServerLaunchDelegate.java:373)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1143)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:407)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.lang.Exception: Stop call failed.
+	at oracle.eclipse.tools.glassfish.GlassfishGenericServerBehaviour$StopJob.call(GlassfishGenericServerBehaviour.java:735)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY oracle.eclipse.tools.glassfish 4 1 2017-01-05 15:05:22.475
+!MESSAGE GlassFish: Stop server could not be finished because of exception.
+!STACK 0
+java.util.concurrent.ExecutionException: java.lang.Exception: Stop call failed.
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at oracle.eclipse.tools.glassfish.GlassfishGenericServerBehaviour.stopImpl(GlassfishGenericServerBehaviour.java:314)
+	at oracle.eclipse.tools.glassfish.GlassfishGenericServerBehaviour.stopServer(GlassfishGenericServerBehaviour.java:304)
+	at oracle.eclipse.tools.glassfish.GlassfishGenericServerBehaviour.stop(GlassfishGenericServerBehaviour.java:275)
+	at oracle.eclipse.tools.glassfish.GlassfishServerLaunchDelegate$GlassfishServerDebugListener.handleDebugEvents(GlassfishServerLaunchDelegate.java:373)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1143)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:407)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.lang.Exception: Stop call failed.
+	at oracle.eclipse.tools.glassfish.GlassfishGenericServerBehaviour$StopJob.call(GlassfishGenericServerBehaviour.java:735)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)

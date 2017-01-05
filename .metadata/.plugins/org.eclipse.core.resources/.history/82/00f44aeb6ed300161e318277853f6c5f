@@ -28,6 +28,9 @@
 			
 			<f:ajax execute="@form" render=":tabela @form">
 				<h:commandButton value="Gravar" action="#{produtoBean.grava}"/>
+				<h:commandButton value="Cancelar a edição"
+							action="#{produtoBean.cancela}" update="@form"
+							rendered="#{not empty produtoBean.produto.id}" /> 
 			</f:ajax>			
 
 		</h:panelGrid>
